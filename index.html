@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>TPM</title>
+
+        <link rel="icon" type="image/x-icon" href="resources/tab.png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        
+        <header>
+
+            <a href="#" class="nav-logo">The PUPian Maze</a>
+
+            <div class="bx bx-menu" id="nav-btn"></div>
+
+            <ul class="nav-link">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#game">Game</a></li>
+            </ul>
+
+        </header>
+
+        <section id="home">
+
+            <div class="home-cont">
+                
+                <h1>Navigate Isko through the maze and lead him to PUP</h1>
+
+                <a href="#game" class="home-game">Play the maze here</a>
+
+            </div>
+
+            <div class="home-img">
+
+                <img src="resources/isko.png">
+
+            </div>
+
+        </section>
+
+        <section id="about">
+
+            <h2>A* Algorithm and how to play the maze</h2>
+
+            <embed src="resources/about.pdf" type="application/pdf" class="pdf-file" >
+        
+        </section>
+
+        <section id="game">
+
+            <h2>Help isko get to PUP</h2>
+           
+            <div class="game-cont">
+
+                <div>
+
+                    <button onclick="generateMaze()">Generate Maze</button>
+                    <button onclick="findBestPath()">Best Path</button>
+
+                    <select id="difficulty" onchange="generateMaze()">
+                        <option value="11">Easy</option>
+                        <option value="15">Medium</option>
+                        <option value="21">Hard</option>
+                        <option value="61">Extreme</option>
+                    </select>
+
+                </div>
+
+                <div class="maze-div">
+                    
+                    <table id="maze" class="maze"></table>
+
+                </div>
+
+            </div>  
+
+        </section>
+
+        <script src="function.js"></script>
+
+    </body>
+
+</html>
